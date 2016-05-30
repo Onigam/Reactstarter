@@ -72,10 +72,10 @@ On va rajouter quelques préréglages afin d'utiliser babel avec React et pour p
 Babel nous permet de configurer différentes options pour différents environnements d'exploitation à l' aide de la clé `env` dans l'objet de configuration babel. Nous allons inclure le `babel-hmre` preset uniquement pour notre environnement de développement (donc l'environnement de prod n'aura pas le rechargement à chaud des modules js).   
 
     {
-        "Presets" :  [ "es2015" , "stade-0" , "réagir" ] ,
+        "Presets" :  [ "es2015" , "stade-0" , "react" ] ,
         "env" :  {
             "développement" :  {
-              "presets" :  [ "réagir-hmre" ]
+              "presets" :  [ "react-hmre" ]
             }
-        } 
+        }
     }
