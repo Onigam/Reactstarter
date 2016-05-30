@@ -9,6 +9,7 @@ On va voir ici comment:
 * Faire du css modulaire avec `postcss`.
 * Mettre en place un processus de test.
 * Router différentes pages avec react-router.
+* Afficher un newsfeed (basé sur l'api [eventful](http://eventful.com))
 
 
 ## Table des matières
