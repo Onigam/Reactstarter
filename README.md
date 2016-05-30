@@ -26,7 +26,8 @@ On va voir ici comment:
 * La gestion des routes
  * A venir...
 * Affichage d'un newsfeed
- * A venir
+ * Récupèration des donnés eventfull.
+ * Le style avec [material ui](http://www.material-ui.com/#/)
 
 ## Installation de l'environnement
 
@@ -72,10 +73,14 @@ On va rajouter quelques préréglages afin d'utiliser babel avec React et pour p
 Babel nous permet de configurer différentes options pour différents environnements d'exploitation à l' aide de la clé `env` dans l'objet de configuration babel. Nous allons inclure le `babel-hmre` preset uniquement pour notre environnement de développement (donc l'environnement de prod n'aura pas le rechargement à chaud des modules js).   
 
     {
-        "Presets" :  [ "es2015" , "stade-0" , "react" ] ,
+        "presets" :  [ "es2015" , "stade-0" , "react" ] ,
         "env" :  {
-            "développement" :  {
+            "development" :  {
               "presets" :  [ "react-hmre" ]
             }
         }
     }
+
+## Webpack
+
+La mise en place de webpack peut être un peu complexe, surtout si l'on n'a pas de modèle sur lequel s'appuyer, mais pas de panique nous allons construire notre configuration webpack avec l'aide d'un outil de démarrage webpack très pratique appelé [hjs-webpack](https://github.com/HenrikJoreteg/hjs-webpack)
