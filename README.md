@@ -108,10 +108,19 @@ d'un objet de configuration simple qui sert à construire la configuration webpa
 Cet objet ne requière que deux clés:
 
 * in - un unique fichier d'entrée.
-* out - le chemin du répertoire ou seront générés les fichiers.   
-
+* out - le chemin du répertoire où seront générés les fichiers.   
 
     var config = getConfig({
         in: join(__dirname, 'src/app.js'),
         out: join(__dirname, 'dist')
+    })
+
+hjs-webpack contient une option appellé `clearBeforeBuild` dont l'on va se servir
+et qui sert a supprimer tous les fichiers ayant été créé lors d'un précédent build
+avant de démarrer le nouveau.
+
+    var config = getConfig({
+      in: join(__dirname, 'src/app.js'),
+      out: join(__dirname, 'dist'),
+      clearBeforeBuild: true
     })
