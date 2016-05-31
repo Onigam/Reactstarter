@@ -226,7 +226,7 @@ On peu ensuite lancer le serveur de cette manière:
     $ npm start
 
   A noter que j'ai rajouté une commande `start-windows` spécialement pour les utilisateurs windows a ce moment la utilisé
-  la commande `npm run-script start-windows` au lieu de `npm-start`
+  la commande `npm run-script start-windows` au lieu de `npm start`
 
   Si tous ce passe bien vous devriez avoir dans votre console:
 
