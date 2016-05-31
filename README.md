@@ -1,5 +1,4 @@
 # ReactStarter
-Based on this [article](https://www.fullstackreact.com/articles/react-tutorial-cloning-yelp/#a-word-on-dependencies)
 
 Il s'agit ici d'un tuto pour mettre en place un environnement **React** avec **Webpack**.
 
@@ -26,7 +25,7 @@ On va voir ici comment:
 * La gestion des routes
  * A venir...
 * Affichage d'un newsfeed
- * Récupèration des donnés eventfull.
+ * Récupèration des données eventfull.
  * Le style avec [material ui](http://www.material-ui.com/#/)
 
 ## Installation de l'environnement
