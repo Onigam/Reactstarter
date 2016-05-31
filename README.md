@@ -102,3 +102,15 @@ Dans `webpack.config.js` on va configurer notre module webpack. Pour démarrer o
           resolve = path.resolve;
 
     const getConfig = require('hjs-webpack');
+
+le module hjs-webpack export une unique fonction qui prend un seul argument, il s'agit
+d'un objet de configuration simple qui sert à construire la configuration webpack.
+Cet objet ne requière que deux clés:
+
+* in - Un unique fichier d'entré.
+* out - le chemin du répertoire ou seront générés les fichiers.   
+
+    var config = getConfig({
+        in: join(__dirname, 'src/app.js'),
+        out: join(__dirname, 'dist')
+    })
