@@ -82,4 +82,23 @@ Babel nous permet de configurer différentes options pour différents environnem
 
 ## Webpack
 
-La mise en place de webpack peut être un peu complexe, surtout si l'on n'a pas de modèle sur lequel s'appuyer, mais pas de panique nous allons construire notre configuration webpack avec l'aide d'un outil de démarrage webpack très pratique appelé [hjs-webpack](https://github.com/HenrikJoreteg/hjs-webpack)
+La mise en place de webpack peut être un peu complexe, surtout si l'on n'a pas de modèle sur lequel s'appuyer, mais pas de panique nous allons construire notre configuration webpack avec l'aide d'un outil de démarrage webpack très pratique appelé [hjs-webpack](https://github.com/HenrikJoreteg/hjs-webpack).
+hjs-webpack met en place des loaders pour les environnements de développement et de production avec du rechargement à chaud, de l'obfuscation, du support ES6, etc.
+
+Commencons par installer les dépendances webpack et hjs-webpack:
+
+    $ npm install --save-dev hjs-webpack webpack
+
+Webpack est un peu inutile sans ses "loaders" et sans configuration, installons maintenant les loaders dont nous aurons besoin tels que le babel-loader, le loader de style css, le loader de fichier ainsi qu'un loader d'url (pour le chargement des  fonts cela est déjà gèré par hjs-webpack).
+
+    $ npm install --save-dev babel-loader css-loader style-loader postcss-loader url-loader file-loader
+
+Dans `webpack.config.js` on va configurer notre module webpack. Pour démarrer on va inclure ces modules:
+
+    const webpack = require('webpack');
+    const fs      = require('fs');
+    const path    = require('path'),
+          join    = path.join,
+          resolve = path.resolve;
+
+    const getConfig = require('hjs-webpack');
