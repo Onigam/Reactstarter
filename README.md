@@ -107,8 +107,9 @@ le module hjs-webpack export une unique fonction qui prend un seul argument, il 
 d'un objet de configuration simple qui sert à construire la configuration webpack.
 Cet objet ne requière que deux clés:
 
-* in - Un unique fichier d'entré.
+* in - un unique fichier d'entrée.
 * out - le chemin du répertoire ou seront générés les fichiers.   
+
 
     var config = getConfig({
         in: join(__dirname, 'src/app.js'),
