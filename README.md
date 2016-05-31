@@ -124,3 +124,46 @@ avant de démarrer le nouveau.
       out: join(__dirname, 'dist'),
       clearBeforeBuild: true
     })
+
+On va ajouter quelques variables pour identifier les chemins des sources des
+modules node et du repertoire de build.
+
+    const root    = resolve(__dirname);
+    const src     = join(root, 'src');
+    const modules = join(root, 'node_modules');
+    const dest    = join(root, 'dist');
+
+    var config = getConfig({
+      in: join(src, 'app.js'),
+      out: dest,
+      clearBeforeBuild: true
+    })
+
+hjs-webpack met identifie les config d'environnements (dev et prod) en utilisant
+la valeur du premier paramètre de commande process.argv[1], mais il est aussi possible
+de definir une variable d'environnement et de s'en servir a la place.
+On va utiliser la valeur `isDev` dans notre config, cette valeur sera setté fonction
+de la valeur de notre variable d'environnement `NODE_ENV`, on utilisera la valeur `developpement`
+pour l'environnement de dev:
+
+    const NODE_ENV = process.env.NODE_ENV;
+    const isDev = NODE_ENV === 'development';
+
+    var config = getConfig({
+      isDev: isDev,
+      in: join(src, 'app.js'),
+      out: dest,
+      clearBeforeBuild: true
+    })
+
+Webpack attend que l'on export un objet de configuration du fichier webpack.config.js
+On peut exporter notre config de la manière suivante:
+
+    // ...
+    var config = getConfig({
+      // ...
+    })
+
+    module.exports = config;
+
+Passons maintenant au chose sérieuse en commençant à build.
