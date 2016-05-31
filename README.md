@@ -30,10 +30,10 @@ On va voir ici comment:
 
 ## Installation de l'environnement
 
-Une des parties les plus douloureuses de la construction d' une application React est la construction du boilerplate. Nous allons construire notre application en selectionnant quelques outils  utiles qui vont nous faciliter le developpement ainsi que le processus de la mise en production.
+Une des parties les plus douloureuses dans la construction d' une application React est la mise en place de l'environement. Nous allons construire notre application en selectionnant quelques outils  utiles qui vont nous faciliter le developpement ainsi que le processus de mise en production.
 
-Dans ce post, nous allons tout installer directement, cela devrait donner une bonne idée sur la façon de démarrer un nouveau projet à partir de zéro.
-Nous allons utiliser certaines fonctions JavaScript ES6, les modules inline css, les module de chargement asynchrone, effectuer des tests, et plus encore. Nous allons utiliser `webpack` pour sa facilité de mise en œuvre avec `babel` comme transpileur, ainsi que quelques autres fonctions pratiques qu'il fournit.
+Ici nous allons tout installer directement, cela devrait donner une bonne idée sur la façon de démarrer un nouveau projet à partir de zéro.
+Nous allons utiliser certaines fonctions JavaScript ES6, les modules inline css, les modules de chargement asynchrone, définir une stratégie de test et plus encore. Nous allons utiliser `webpack` pour sa facilité de mise en œuvre avec `babel` comme transpileur, ainsi que quelques autres fonctions pratiques qu'il fournit.
 
 > Assurez vous que vous avez `node.js` et `npm` d'installés.
 
@@ -43,7 +43,7 @@ Nous allons créer un nouveau projet racine que l'on va appeler ici ReactStarter
     $ mkdir -p src/{components,containers,styles,utils,views}\
         && touch webpack.config.js
 
-Dans le même répertoire, nous allons créer le projet racine en utilisant la commande d'initialisation npm. Une fois l'initialisation terminée, nous aurons un package.json dans le même répertoire, ce qui permettra de définir un processus reproductible pour la construction de l'application.
+Dans le même répertoire, nous allons créer le projet racine en utilisant la commande d'initialisation npm. Une fois l'initialisation terminée, nous aurons un package.json dans le même répertoire ce qui permettra de définir un processus reproductible pour la construction de l'application.
 
     npm init
 
@@ -51,13 +51,13 @@ Nous aurons besoin de quelques dépendances pour commencer.
 
 ## Un mot sur les dépendances
 
-Avant de commencer à construire notre application, nous allons mettre en place la chaine de build.
+Avant de commencer à construire notre application, nous allons mettre en place notre chaine de build avec webpack et babel.
 
 ## Babel
 
 Babel est un transpileur JavaScript qui nous permet d'utiliser les fonctionnalité ES2015 dans nos developpements.
 
-    npm install --save-dev babel-core babel-preset-es2015 babel-preset-réagir babel-preset-réaction-hmre babel-preset-stage-0
+    npm install --save-dev babel-core babel-preset-es2015 babel-preset-react babel-preset-react-hmre babel-preset-stage-0
 
 Nous avons ensuite besoin de configurer `babel` pour notre application. Ceci passe par l'édition d'un fichier appelé `.babelrc` à la racine du projet (même endroit que `package.json`).
 
