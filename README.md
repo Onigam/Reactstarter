@@ -1,13 +1,17 @@
 # ReactStarter
 
-Il s'agit ici d'un tuto pour mettre en place un environnement **React** avec **Webpack**.
+Il s'agit ici d'un tuto pour mettre en place un environnement **React** **Redux** **Webpack**.
+
+Le but du tuto est d'écrire de A à Z une application single page pouvant récupèrer la liste des évènements eventful 
+pour une zone géographique donnée, l'application affichera sous forme de liste les événements contenu dans cette zone.
 
 On va voir ici comment:
-* Mettre en place un projet React depuis le début.
+* Mettre en place un projet React depuis le début et mettre en place son environnement de dev avec babel et webpack.
 * Créer des composants `React`.
+* Router différentes pages avec react-router.
+* Gèrer les données avec [Redux](http://redux.js.org/) 
 * Faire du css modulaire avec `postcss`.
 * Mettre en place un processus de test.
-* Router différentes pages avec react-router.
 * Afficher un newsfeed (basé sur l'api [eventful](http://eventful.com))
 
 
@@ -19,6 +23,7 @@ On va voir ici comment:
  * React
  * Création du point d'entrée `app.js`
  * Démo: Basic app.js
+ * Mise en place de react-router
  * postcss
  * Les modules CSS
  * Configuration des environnements multiples
@@ -107,7 +112,7 @@ le module hjs-webpack exporte une unique fonction qui prend un seul argument, il
 d'un objet de configuration simple qui sert à construire la configuration webpack.
 Cet objet ne requière que deux clés:
 
-* in - un unique fichier d'entrée.
+* in - un unique fichier d'entrée. babel sera capable de resoudre l'arbre des dépende
 * out - le chemin du répertoire où seront générés les fichiers.
 
 
